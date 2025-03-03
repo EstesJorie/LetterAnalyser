@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function Counts(input={fakeinput}) {
+export default function Counts(inputs={fakeinput}) {
     const [characterCount, setCharacterCount] = useState(0)
     const [wordCount, setWordCount] = useState(0)
     const [sentenceCount, setSentenceCount] = useState(0)
@@ -24,7 +24,7 @@ export default function Counts(input={fakeinput}) {
     
   return (
     <div>
-        <div></div>
+        <div className='bg-blue-50'></div>
         <div></div>
         <div></div>
     </div>
