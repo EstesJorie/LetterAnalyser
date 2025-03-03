@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function Counts(inputs={fakeinput}) {
+export default function Counts({text}) {
     const [characterCount, setCharacterCount] = useState()
     const [wordCount, setWordCount] = useState()
     const [sentenceCount, setSentenceCount] = useState()
 
-    const input = "Hello, is this thing working. How many sentences are in here."
+    const input = text
 
     let length = input.length
     let spaceCount = input.split(" ").length - 1
@@ -18,6 +18,7 @@ export default function Counts(inputs={fakeinput}) {
     setWordCount(spaceCount + stopCount)
     setSentenceCount(stopCount)
     }
+    
 
     
     

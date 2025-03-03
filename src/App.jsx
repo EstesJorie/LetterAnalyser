@@ -11,7 +11,7 @@ function App() {
     <>
       <TextGrabber setText={setText} />
       <ExampleAnalyser text={text} />
-      <Counts />
+      <Counts text={text}/>
       <input></input>
       </>
   )
