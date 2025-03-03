@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Counts />
+      <input></input>
     </>
   )
 }
