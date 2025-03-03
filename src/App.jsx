@@ -3,7 +3,6 @@ import TextGrabber from '../components/textbox'
 import ExampleAnalyser from '../components/exampleanalyser'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [text, setText] = useState('');
 
   return (
@@ -16,5 +15,4 @@ function App() {
     </div>
   )
 }
-
 export default App
