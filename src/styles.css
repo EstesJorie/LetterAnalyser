@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+    font-family: "Noto Sans Mono", serif;
+}
+
 .bggradient {
     @apply bg-gradient-to-b from-[#14213d] to-[#284b63];
 }
