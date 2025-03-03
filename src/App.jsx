@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
-import TextGrabber from '../components/textbox'
-import ExampleAnalyser from '../components/exampleanalyser'
 import Counts from '../components/counts';
+import React, { useState } from 'react';
+import TextGrabber from '../components/textbox';
+import ExampleAnalyser from '../components/exampleanalyser';
+import LetterDensity from '../components/LetterDensity';
 
 function App() {
-  const [count, setCount] = useState(0)
   const [text, setText] = useState('');
 
   return (
     <>
-      <TextGrabber setText={setText} />
-      <ExampleAnalyser text={text} />
-      <Counts text={text}/>
-      <input></input>
-      </>
-  )
+    <div className='bggradient text-white w-screen h-screen px-35 py-5'>
+      <div className='mainbox w-full h-full'>
+        <TextGrabber setText={setText} />
+        <ExampleAnalyser text={text} />
+        <Counts text={text}/>
+        <LetterDensity text={text} />
+      </div>
+    </div>
+    </>
+  );
 }
 
-export default App
+export default App;

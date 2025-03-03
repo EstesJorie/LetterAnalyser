@@ -9,6 +9,8 @@ export default function TextGrabber({ setText }) {
             let data = Object.fromEntries(formData.entries())
 
             setText(data.text); 
+
+                console.log(data)
         }
 
 return (
