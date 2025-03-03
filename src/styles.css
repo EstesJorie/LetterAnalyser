@@ -4,5 +4,5 @@
     @apply bg-gradient-to-b from-[#14213d] to-[#284b63];
 }
 .mainbox {
-    @apply bg-[#0A111F];
+    @apply bg-[#0A111F] shadow-lg shadow-[#14213d];
 }
