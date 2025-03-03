@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function Counts(inputs={fakeinput}) {
-    const [characterCount, setCharacterCount] = useState(0)
-    const [wordCount, setWordCount] = useState(0)
-    const [sentenceCount, setSentenceCount] = useState(0)
+    const [characterCount, setCharacterCount] = useState()
+    const [wordCount, setWordCount] = useState()
+    const [sentenceCount, setSentenceCount] = useState()
 
     const input = "Hello, is this thing working. How many sentences are in here."
 
@@ -18,15 +18,19 @@ export default function Counts(inputs={fakeinput}) {
     setWordCount(spaceCount + stopCount)
     setSentenceCount(stopCount)
     }
+
+    
     
 
     console.log(characterCount, wordCount, sentenceCount)
     
   return (
-    <div>
-        <div className='bg-blue-50'></div>
+    <>
+
+        <div className='bg-blue-500 w-full'></div>
         <div></div>
         <div></div>
-    </div>
+
+    </>
   )
 }
