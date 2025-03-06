@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Bars from './Bars';
+
 
 const LetterDensity = ({ text }) => {
     const [textValue, setTextValue] = useState("");
@@ -42,10 +42,10 @@ const LetterDensity = ({ text }) => {
                       <tr key={letter} >
                         <td>{letter}</td>
                         <td className="pr-4">{count}</td>
-                        <td>{((count / letterCount) * 100).toFixed(2)}%</td>
+                        <td className='pr-4'>{((count / letterCount) * 100).toFixed(2)}%</td>
                         <td className='w-full'><div className="w-full  rounded-full h-4 flex items-center">
                               <div
-                                className="bg-green-500 h-4 rounded-full transition-all duration-500 ease-in-out flex items-center justify-end pr-1"
+                                className="bg-red-400 h-4 rounded-full transition-all duration-500 ease-in-out flex items-center justify-end pr-1"
                                 style={{ width: `${(count/letterCount)*100}%` }}
                               >
                                 {(count/letterCount)*100 > 5 && (
