@@ -2,7 +2,7 @@
 
 .mono {
     font-family: "Noto Sans Mono", serif;
-}
+} /* do not use class - not working*/
 
 .bggradient {
     @apply bg-gradient-to-b from-[#14213d] to-[#284b63];
@@ -11,5 +11,5 @@
     @apply bg-[#0A111F] shadow-lg shadow-[#14213d];
 }
 input, textarea {
-    @apply bg-white border-1 border-black text-black mono;
+    @apply bg-white border-1 shadow-md shadow-black text-black;
 }
