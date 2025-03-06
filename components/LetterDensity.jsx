@@ -20,8 +20,8 @@ const LetterDensity = ({ text }) => {
         return str.replace(/[^a-zA-Z]/g, "").length;
     };
 
-    const letterCount = countLetters(textValue);
-    const letterDensity = textValue.split("").reduce((acc, letter) => {
+    const letterCount = countLetters(text);
+    const letterDensity = text.split("").reduce((acc, letter) => {
         if (letter.match(/[a-zA-Z]/)) {
             acc[letter] = (acc[letter] || 0) + 1;
         }
@@ -30,12 +30,6 @@ const LetterDensity = ({ text }) => {
 
     return (
         <div>
-          {!showCountPage ? (
-            <div id="input-page">
-              <textarea id="text" value={textValue} onChange={handleTextChange}></textarea>
-              <button onClick={displayText}>Submit</button>
-            </div>
-          ) : (
             <div id="count-page">
               <div id="display-text">{textValue}</div>
               <div id="letter-count">
@@ -55,7 +49,6 @@ const LetterDensity = ({ text }) => {
                 </table>
               </div>
             </div>
-          )}
         </div>
     );
 }
