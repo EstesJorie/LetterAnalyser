@@ -15,7 +15,7 @@ function App() {
           <TextGrabber setText={setText} />
           <Counts text={text}/>
           <div className="flex flex-auto pr-10">
-            <ReadingTime text={text} />
+            <ReadingTime text={text} />&nbsp;
             <CharacterLimit text={text} /> 
           </div>
           <LetterDensity text={text} />

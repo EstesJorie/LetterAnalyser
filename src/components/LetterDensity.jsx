@@ -32,7 +32,7 @@ const LetterDensity = ({ text }) => {
         <div>
             <div id="count-page">
               <div id="letter-count" className='text-2xl'>
-                <h1>Letters Density</h1>
+                <h1>Letter Density</h1>
               </div>
               <div id="letter-density">
                 <table>
