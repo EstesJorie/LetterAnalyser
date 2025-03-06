@@ -1,9 +1,8 @@
 import Counts from '../components/counts';
 import React, { useState } from 'react';
 import TextGrabber from '../components/textbox';
-import ExampleAnalyser from '../components/exampleanalyser';
 import LetterDensity from '../components/LetterDensity';
-
+import ReadingTime from '../components/ReadingTime';
 
 
 function App() {
@@ -11,11 +10,11 @@ function App() {
 
   return (
     <>
-      <div className='bggradient text-white w-screen h-screen px-35 py-5'>
+      <div className='bggradient text-white w-screen min-h-screen px-35 py-5'>
         <div className='mainbox w-full h-full p-5'>
           <TextGrabber setText={setText} />
-          <ExampleAnalyser text={text} />
           <Counts text={text}/>
+          <ReadingTime text={text} />
           <LetterDensity text={text} />
         </div>
       </div>
