@@ -16,13 +16,15 @@ const LetterDensity = ({ text }) => {
         }
     };
 
-    const countWords = (str) => {
-        return str.split(" ").length;
+    const countLetters = (str) => {
+        return str.replace(/[^a-zA-Z]/g, "").length;
     };
 
-    const wordCount = countWords(textValue);
-    const wordDensity = textValue.split(" ").reduce((acc, word) => {
-        acc[word] = (acc[word] || 0) + 1;
+    const letterCount = countLetters(textValue);
+    const letterDensity = textValue.split("").reduce((acc, letter) => {
+        if (letter.match(/[a-zA-Z]/)) {
+            acc[letter] = (acc[letter] || 0) + 1;
+        }
         return acc;
     }, {});
 
@@ -36,16 +38,16 @@ const LetterDensity = ({ text }) => {
           ) : (
             <div id="count-page">
               <div id="display-text">{textValue}</div>
-              <div id="word-count">
-                <h1>Words Counted: {wordCount}</h1>
+              <div id="letter-count">
+                <h1>Letters Counted: {letterCount}</h1>
               </div>
-              <div id="word-density">
-                <h1>Word Density:</h1>
+              <div id="letter-density">
+                <h1>Letter Density:</h1>
                 <table>
                   <tbody>
-                    {Object.entries(wordDensity).map(([word, count]) => (
-                      <tr key={word}>
-                        <td>{word}</td>
+                    {Object.entries(letterDensity).map(([letter, count]) => (
+                      <tr key={letter}>
+                        <td>{letter}</td>
                         <td>{count}</td>
                       </tr>
                     ))}
