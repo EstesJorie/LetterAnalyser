@@ -31,18 +31,17 @@ const LetterDensity = ({ text }) => {
     return (
         <div>
             <div id="count-page">
-              <div id="display-text">{textValue}</div>
-              <div id="letter-count">
-                <h1>Letters Counted: {letterCount}</h1>
+              <div id="letter-count" className='text-2xl'>
+                <h1>Letters Density</h1>
               </div>
               <div id="letter-density">
-                <h1>Letter Density:</h1>
                 <table>
                   <tbody>
                     {Object.entries(letterDensity).map(([letter, count]) => (
-                      <tr key={letter}>
+                      <tr key={letter} >
                         <td>{letter}</td>
-                        <td>{count}</td>
+                        <td className="pr-4">{count}</td>
+                        <td>{((count / letterCount) * 100).toFixed(2)}%</td>
                       </tr>
                     ))}
                   </tbody>
