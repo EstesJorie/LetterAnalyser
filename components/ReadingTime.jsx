@@ -9,11 +9,7 @@ export default function ReadingTime({text}) {
 
   return (
     <>
-<<<<<<< HEAD
-        <div>Approx. reading time: {readingTime} minute.</div>
-=======
         <div>Approx reading time: {readingTime} minute{plural}</div>
->>>>>>> refs/remotes/origin/main
     </>
   )
 }
