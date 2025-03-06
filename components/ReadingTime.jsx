@@ -9,7 +9,7 @@ export default function ReadingTime({text}) {
 
   return (
     <>
-        <div>Reading time: {readingTime} minute{plural}.</div>
+        <div>Approx reading time: {readingTime} minute{plural}</div>
     </>
   )
 }
