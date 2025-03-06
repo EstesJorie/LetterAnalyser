@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-* {
+.mono {
     font-family: "Noto Sans Mono", serif;
 }
 
@@ -9,4 +9,7 @@
 }
 .mainbox {
     @apply bg-[#0A111F] shadow-lg shadow-[#14213d];
+}
+input, textarea {
+    @apply bg-white border-1 border-black text-black mono;
 }
