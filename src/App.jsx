@@ -2,6 +2,7 @@ import Counts from '../components/counts';
 import React, { useState } from 'react';
 import TextGrabber from '../components/textbox';
 import LetterDensity from '../components/LetterDensity';
+import ReadingTime from '../components/readingtime';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <TextGrabber setText={setText} />
         <Counts text={text}/>
         <LetterDensity text={text} />
+        <ReadingTime text={text} />
 
       </div>
     </div>
