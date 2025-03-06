@@ -5,7 +5,6 @@ import LetterDensity from './components/LetterDensity';
 import ReadingTime from './components/ReadingTime';
 import CharacterLimit from './components/CharacterLimit';
 
-
 function App() {
   const [text, setText] = useState('');
 
@@ -15,8 +14,10 @@ function App() {
         <div className='mainbox w-full h-full p-5'>
           <TextGrabber setText={setText} />
           <Counts text={text}/>
-          <ReadingTime text={text} />
-          <CharacterLimit text={text} />
+          <div className="flex flex-auto pr-10">
+            <ReadingTime text={text} />
+            <CharacterLimit text={text} /> 
+          </div>
           <LetterDensity text={text} />
         </div>
       </div>
