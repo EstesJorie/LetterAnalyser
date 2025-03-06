@@ -17,8 +17,10 @@ return (
         <>
         <div>
         <form onSubmit={handleFormSubmit} action="" id="text-form">
-            <input type="text" name="text" id="" className="mono" placeholder="Type here..." />
-            <button className='scifi'> Analyse </button>
+            <textarea rows="10" name="text" 
+              className="w-full p-3 text-white bg-blue-900 "/>
+            <br />
+            <button> Analyse </button>
         </form>
         </div>
         </>
