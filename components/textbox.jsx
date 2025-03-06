@@ -18,9 +18,9 @@ return (
         <div>
         <form onSubmit={handleFormSubmit} action="" id="text-form">
             <textarea rows="10" name="text" 
-              className="w-full p-3 text-white bg-blue-900 "/>
+              className="w-full p-3 text-white bg-blue-900 mono"/>
             <br />
-            <button> Analyse </button>
+            <button className='scifi'> Analyse </button>
         </form>
         </div>
         </>
