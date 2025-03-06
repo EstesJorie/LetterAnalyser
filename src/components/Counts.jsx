@@ -13,6 +13,10 @@ export default function Counts({text}) {
     let wordCount = spaceCount + stopCount
     let sentenceCount = stopCount
 
+    if (input.slice(-1) == ' ') {
+        wordCount -= 1
+    }
+
     if (stopCount == 0 && characterCount > 0) {
         wordCount += 1
     }
