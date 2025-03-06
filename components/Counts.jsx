@@ -27,17 +27,17 @@ export default function Counts({text}) {
     <>
         <div className='flex items-center justify-center gap-5 p-4'>
             <div className='bg-[#D4A1FB] w-1/3 h-20 rounded flex-col text-white'>
-                <span>{characterCount}</span>
+                <span className='text-2xl'>{characterCount}</span>
                 <span className='align-bottom'>Character Count</span>
             </div>
 
             <div className='bg-[#FFA001] w-1/3 h-20 rounded flex-col text-white'>
-                <span>{wordCount}</span>
+                <span className='text-2xl'>{wordCount}</span>
                 <span className='align-bottom'>Word Count</span>
             </div>
             
             <div className='bg-[#FE8159] w-1/3 h-20 rounded flex-col text-white'>
-                <span>{sentenceCount}</span>
+                <span className='text-2xl justify-center'>{sentenceCount}</span>
                 <span className='align-bottom'>Sentence Count</span>
             </div>
         </div>
