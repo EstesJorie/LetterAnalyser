@@ -9,7 +9,7 @@ export default function ReadingTime({text}) {
 
   return (
     <>
-        <div>Approx reading time: {readingTime} minute{plural}</div>
+        <div className='text-white py-3 px-8 text-center no-underline inline-block text-lg m-1 cursor-pointer border-none rounded'>Approx reading time: {readingTime} minute{plural}</div>
     </>
   )
 }
