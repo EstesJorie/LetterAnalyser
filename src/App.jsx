@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className='bggradient text-white w-screen px-35 py-5'>
+      <div className='bggradient text-white w-screen min-h-screen px-35 py-5'>
         <div className='mainbox w-full h-full p-5'>
           <TextGrabber setText={setText} />
           <Counts text={text}/>
