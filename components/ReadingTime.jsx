@@ -5,9 +5,11 @@ export default function ReadingTime({text}) {
     const wordsPerMinute = 200;
     const readingTime = Math.ceil(wordCount / wordsPerMinute);
 
+    let plural = readingTime === 1 ? "" : "s";
+
   return (
     <>
-        <div>Reading time: {readingTime} minute.</div>
+        <div>Reading time: {readingTime} minute{plural}.</div>
     </>
   )
 }
