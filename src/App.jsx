@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import TextGrabber from '../components/textbox';
 import LetterDensity from '../components/LetterDensity';
 import ReadingTime from '../components/ReadingTime';
+import CharacterLimit from '../components/CharacterLimit';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <TextGrabber setText={setText} />
           <Counts text={text}/>
           <ReadingTime text={text} />
+          <CharacterLimit text={text} />
           <LetterDensity text={text} />
         </div>
       </div>
