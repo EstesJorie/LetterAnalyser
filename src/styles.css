@@ -1,8 +1,16 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.mono {
-    font-family: "Noto Sans Mono", serif;
-} /* do not use class - not working*/
+@layer utilities {
+    .mono {
+        font-family: "Noto Sans Mono";
+    }
+    .scifi {
+        font-family: "Aldrich";
+    }
+} /* apply custom utility classes from inside jsx files */
 
 .bggradient {
     @apply bg-gradient-to-b from-[#14213d] to-[#284b63];
