@@ -1,9 +1,9 @@
-import Counts from '../components/counts';
+import Counts from './components/counts';
 import React, { useState } from 'react';
-import TextGrabber from '../components/textbox';
-import LetterDensity from '../components/LetterDensity';
-import ReadingTime from '../components/ReadingTime';
-import CharacterLimit from '../components/CharacterLimit';
+import TextGrabber from './components/textbox';
+import LetterDensity from './components/LetterDensity';
+import ReadingTime from './components/ReadingTime';
+import CharacterLimit from './components/CharacterLimit';
 
 function App() {
   const [text, setText] = useState('');
