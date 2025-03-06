@@ -11,15 +11,14 @@ function App() {
 
   return (
     <>
-    <div className='bggradient text-white w-screen h-screen px-35 py-5'>
-      <div className='mainbox w-full h-full p-5'>
-        <TextGrabber setText={setText} />
-        <ExampleAnalyser text={text} />
-        <Counts text={text}/>
-        <LetterDensity text={text} />
-
+      <div className='bggradient text-white w-screen h-screen px-35 py-5'>
+        <div className='mainbox w-full h-full p-5'>
+          <TextGrabber setText={setText} />
+          <ExampleAnalyser text={text} />
+          <Counts text={text}/>
+          <LetterDensity text={text} />
+        </div>
       </div>
-    </div>
     </>
   );
 }
