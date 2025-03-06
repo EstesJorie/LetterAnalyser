@@ -5,6 +5,7 @@ import LetterDensity from './LetterDensity';
 import ReadingTime from './ReadingTime';
 import CharacterLimit from './CharacterLimit';
 import { create } from 'zustand';
+import TimCharLimit from './TimCharLimit';
 
 export const useStore = create(set => ({
   text: '',
@@ -22,9 +23,10 @@ function TextAanlyser() {
           <Counts text={text}/>
           <div className="flex flex-auto pr-10">
             <ReadingTime text={text} />
-            <CharacterLimit text={text} /> 
+
           </div>
           <LetterDensity text={text} />
+          <TimCharLimit text={text} />
         </div>
       </div>
     </>
