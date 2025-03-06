@@ -7,7 +7,7 @@ export default function Counts({text}) {
 
     let length = input.length
     let spaceCount = input.split(" ").length - 1
-    let stopCount = input.split(".").length - 1
+    let stopCount = input.split(".").length + input.split("!").length + input.split("?").length - 1
 
     let characterCount = length - spaceCount
     let wordCount = spaceCount + stopCount
