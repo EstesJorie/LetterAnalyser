@@ -40,7 +40,7 @@ const LetterDensity = ({ text }) => {
                   <tbody>
                     {Object.entries(letterDensity).map(([letter, count]) => (
                       <tr key={letter} >
-                        <td>{letter}</td>
+                        <td className='pr-4'>{letter}</td>
                         <td className="pr-4">{count}</td>
                         <td className='pr-4'>{((count / letterCount) * 100).toFixed(2)}%</td>
                         <td className='w-full'><div className="w-full  rounded-full h-4 flex items-center">
