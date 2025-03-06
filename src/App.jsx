@@ -1,4 +1,4 @@
-import Counts from './components/counts';
+import Counts from './components/Counts';
 import React, { useState } from 'react';
 import TextGrabber from './components/textbox';
 import LetterDensity from './components/LetterDensity';
@@ -15,7 +15,7 @@ function App() {
           <TextGrabber setText={setText} />
           <Counts text={text}/>
           <div className="flex flex-auto pr-10">
-            <ReadingTime text={text} />&nbsp;
+            <ReadingTime text={text} />
             <CharacterLimit text={text} /> 
           </div>
           <LetterDensity text={text} />

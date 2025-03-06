@@ -1,6 +1,8 @@
 import React from 'react';
+import { useStore } from '../App'; // Adjust the import path as necessary
 
-export default function CharacterLimit({ text }) {
+export default function CharacterLimit() {
+    const { text } = useStore();
     const maxCharLimit = 250;
 
     const handleClick = () => {
