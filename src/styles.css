@@ -15,6 +15,9 @@
 .mainbox {
     @apply bg-[#0A111F] shadow-lg shadow-[#14213d];
 }
+input, textarea, .shaded {
+    @apply shadow-md shadow-black;
+}
 input, textarea {
-    @apply  border-1 shadow-md shadow-black;
+    @apply  border-1;
 }
