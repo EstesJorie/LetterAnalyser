@@ -17,8 +17,8 @@ return (
         <>
         <div>
         <form onSubmit={handleFormSubmit} action="" id="text-form">
-            <input type="text" name="text" id="" placeholder="Type here..." />
-            <button> Analyse </button>
+            <input type="text" name="text" id="" className="mono" placeholder="Type here..." />
+            <button className='scifi'> Analyse </button>
         </form>
         </div>
         </>
