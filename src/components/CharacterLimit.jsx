@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from '../App'; // Adjust the import path as necessary
+import { useStore } from './TextAnalyser'; // Adjust the import path as necessary
 
 export default function CharacterLimit() {
     const { text } = useStore();
