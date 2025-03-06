@@ -15,6 +15,7 @@ function App() {
           <TextGrabber setText={setText} />
           <ExampleAnalyser text={text} />
           <Counts text={text}/>
+          <ReadingTime text={text} />
           <LetterDensity text={text} />
         </div>
       </div>
