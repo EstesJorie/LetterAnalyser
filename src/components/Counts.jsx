@@ -7,24 +7,36 @@ export default function Counts({text}) {
 
     let length = input.length
     let spaceCount = input.split(" ").length - 1
-    let stopCount = input.split(".").length + input.split("!").length + input.split("?").length - 1
+    let stopCount = input.split(".").length + input.split("!").length + input.split("?").length - input.split(/\.\./g).length - input.split(/(\w+)\.(\w+)/g).length - 1
 
     let characterCount = length - spaceCount
-    let wordCount = spaceCount + stopCount
-    let sentenceCount = stopCount
+    let wordCount = 0
+    let sentenceCount = 0
 
-    if (input.slice(-1) == ' ') {
-        wordCount -= 1
+    if ((input.match(/(\w)\.(\w)/g)) == null) {
+        wordCount = input.split(/\w+/g).length -1
+    } else {
+        wordCount = input.split(/\w+/g).length - (input.match(/(\w)\.(\w)/g).length) -1
     }
 
-    if (stopCount == 0 && characterCount > 0) {
-        wordCount += 1
+    // if (input.slice(-1) != ('.' || ' ') && characterCount > 0) {
+    //     sentenceCount = stopCount + 1
+    // } else {
+    //     sentenceCount = stopCount
+    // }
+    
+    if ((input.slice(-2) == '. ') || (input.slice(-1) == '.')) {
+        sentenceCount = stopCount
+    } else if (characterCount > 0) {
+        sentenceCount = stopCount + 1
     }
+    
+    
+    // if (input.split(/w+(\.)/g).length -1 > 0) {
+    //     sentenceCount = input.split(/w+(\.)/g).length -1
+    // }
 
-    if (sentenceCount == 0 && characterCount > 0) {
-        sentenceCount = 1
-    }
-
+    
     console.log(characterCount, wordCount, sentenceCount)
     
   return (
