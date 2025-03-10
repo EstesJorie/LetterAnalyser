@@ -7,7 +7,9 @@ export default function Counts({text}) {
 
     let length = input.length
     let spaceCount = input.split(" ").length - 1
-    let stopCount = input.split(".").length + input.split("!").length + input.split("?").length - input.split(/\.\./g).length - input.split(/(\w+)\.(\w+)/g).length - 1
+    let ellipses = input.split(/[/./.]/g).length - 1
+    let stopCount = input.split(/[.!?]+/g).length - ellipses - 1
+    
 
     let characterCount = length - spaceCount
     let wordCount = 0
@@ -25,7 +27,9 @@ export default function Counts({text}) {
     //     sentenceCount = stopCount
     // }
     
-    if ((input.slice(-2) == '. ') || (input.slice(-1) == '.')) {
+    if ((input.match(/(\w+)\.(\w+)/g)) != null) {
+        sentenceCount = stopCount - (input.split(/(\w+)\.(\w+)/g).length -1)
+    } else if ((input.slice(-2) == [/\s+[.?!]/g])) {
         sentenceCount = stopCount
     } else if (characterCount > 0) {
         sentenceCount = stopCount + 1
