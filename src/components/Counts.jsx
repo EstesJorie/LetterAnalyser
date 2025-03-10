@@ -8,15 +8,15 @@ export default function Counts({text}) {
     let length = input.length
     let spaceCount = input.split(" ").length - 1
     let ellipses = input.split(/[/./.]/g).length - 1
-    let stopCount = input.split(/[.!?]+/g).length - ellipses - 1
+    let stopCount = input.split(/[.!?]/g).length
     
 
     let characterCount = length - spaceCount
     let wordCount = 0
-    let sentenceCount = 0
+    let sentenceCount = text != "" ? stopCount : 0
 
     if ((input.match(/(\w)\.(\w)/g)) == null) {
-        wordCount = input.split(/\w+/g).length -1
+        wordCount = input.split(/\w+/g).length - 1
     } else {
         wordCount = input.split(/\w+/g).length - (input.match(/(\w)\.(\w)/g).length) -1
     }
@@ -29,10 +29,10 @@ export default function Counts({text}) {
     
     if ((input.match(/(\w+)\.(\w+)/g)) != null) {
         sentenceCount = stopCount - (input.split(/(\w+)\.(\w+)/g).length -1)
-    } else if ((input.slice(-2) == [/\s+[.?!]/g])) {
+    } else if ((input.slice(-2).match([/[.?!]\s/g])) || (input.slice(-1).match([/[.?!]/g])) ) {
         sentenceCount = stopCount
     } else if (characterCount > 0) {
-        sentenceCount = stopCount + 1
+        sentenceCount = stopCount
     }
     
     
@@ -41,7 +41,7 @@ export default function Counts({text}) {
     // }
 
     
-    console.log(characterCount, wordCount, sentenceCount)
+    console.log(characterCount, wordCount, stopCount)
     
   return (
     <>
