@@ -5,6 +5,7 @@ import LetterDensity from './LetterDensity';
 import ReadingTime from './ReadingTime';
 import { create } from 'zustand';
 import TimCharLimit from './TimCharLimit';
+import AnalyseSentiment from './SentimentAnalysis.jsx';
 
 export const useStore = create(set => ({
   text: '',
@@ -28,7 +29,10 @@ function TextAanlyser() {
               <TimCharLimit text={text} />
             </div>
           </div>
-          <LetterDensity text={text} />
+          <div className='grid grid-cols-2 pt-2'>
+            <AnalyseSentiment text={text} />
+            <LetterDensity text={text} />
+          </div>
         </div>
       </div>
     </>
