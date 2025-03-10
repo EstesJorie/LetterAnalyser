@@ -18,7 +18,7 @@ function TextAanlyser() {
     <>
       <div className='bggradient text-white w-screen min-h-screen px-4 py-5 sm:px-6 md:px-10 lg:px-20'>
         <div className='mainbox w-full h-full p-5'>
-          <h1 className='text-5xl font-bold px-2 pt-5 pb-5 text-left'>Text Analyser</h1>
+          <h1 className='text-5xl font-bold px-2 pt-5 pb-5 text-left scifi'>Text Analyser</h1>
           <p className='text-lg text-left px-2 pb-5'>A simple text analyser that provides the user with statistics on their inputted text, in real-time.</p>
           <TextGrabber setText={setText} />
           <Counts text={text}/>

@@ -10,7 +10,7 @@ return (
         <div>
         <form onSubmit={handleFormSubmit} action="" id="text-form">
             <textarea rows="10" name="text" placeholder='Start typing...'
-             className="w-full p-3 mono rounded-xs text-white bg-[#284b63] placeholder-[#14213d]" onChange={handleFormSubmit} ></textarea>
+             className="w-full p-3 mono rounded-xs text-white bg-[#284b63] placeholder-[#528DB7]" onChange={handleFormSubmit} ></textarea>
         </form>
         </div>
         </>
