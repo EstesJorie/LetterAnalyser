@@ -8,7 +8,6 @@ export default function TimCharLimit({ text }) {
     const handleCheckboxChange = () => {
         setIsCharLimitActive(!isCharLimitActive);
         setLabelText(!isCharLimitActive ? 'Remove Character Limit' : 'Set Character Limit');
-
     };
 
     useEffect(() => {
@@ -38,7 +37,7 @@ export default function TimCharLimit({ text }) {
                     htmlFor={id}
                     className={`
                         text-white py-3 px-4 text-center no-underline inline-block text-lg m-1 cursor-pointer border-none rounded-full
-                        ${isCharLimitActive ? 'bg-green-700' : 'hover:bg-green-900'}
+                        ${isCharLimitActive ? 'bg-green-700 font-bold' : 'hover:bg-green-900 font-bold'}
                     `}>
                     {labelText}
                 </label>

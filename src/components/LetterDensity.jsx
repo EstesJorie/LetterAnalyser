@@ -32,7 +32,7 @@ const LetterDensity = ({ text }) => {
     return (
         <div>
             <div id="count-page">
-              <div id="letter-count" className='text-3xl font-semibold px-4'>
+              <div id="letter-count" className='text-3xl font-semibold px-2'>
                 <h1>Letter Density</h1>
               </div>
               <div id="letter-density">
