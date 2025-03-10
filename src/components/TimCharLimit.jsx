@@ -10,7 +10,7 @@ export default function TimCharLimit({ text }) {
 
     return (
         <div>
-            <button>{text}{length}</button>
+            <button className='text-white py-3 px-4 text-center no-underline inline-block text-lg m-1 cursor-pointer border-none roundeds'>Set Character Limit</button>
         </div>
     );
 }

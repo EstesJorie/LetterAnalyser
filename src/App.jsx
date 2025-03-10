@@ -1,7 +1,5 @@
-
 import React from 'react'
 import TextAanlyser from './components/TextAnalyser';
-
 
 function App() {
 
