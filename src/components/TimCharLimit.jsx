@@ -16,21 +16,21 @@ export default function TimCharLimit({ text }) {
 
     if (isCharLimitActive && text.length > maxCharLimit) {
         alert('Text exceeds the character limit.');
-        console.log(`Character limit exceeded by ${text.length - maxCharLimit} characters.`);
+        console.log(`Character limit exceeded by ${text.length - maxCharLimit} characters`);
     }
 
     const id = "charLimitCheckbox"; 
 
     return (
         <div>
-            <div className=" gap-2 items-center">
+            <div className="gap-2 items-center">
                 <input
                     type="checkbox"
                     id={id}
                     checked={isCharLimitActive}
                     onChange={handleCheckboxChange}
                     className="
-                        appearance-none
+                        
                         h-0 w-0
                     "/>
                 <label
