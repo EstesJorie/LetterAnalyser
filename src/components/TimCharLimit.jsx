@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function TimCharLimit({ text }) {
     const [isCharLimitActive, setIsCharLimitActive] = useState(false);
     const [labelText, setLabelText] = useState('Set Character Limit');
-    const maxCharLimit = 250;
+    const maxCharLimit = 100;
 
     const handleCheckboxChange = () => {
         setIsCharLimitActive(!isCharLimitActive);
@@ -41,6 +41,11 @@ export default function TimCharLimit({ text }) {
                     `}>
                     {labelText}
                 </label>
+                {isCharLimitActive && (
+                    <div className="text-gray-400 text-md pt-2  ml-4">
+                        {text.length}/{maxCharLimit}
+                    </div>
+                )}
             </div>
         </div>
     );
