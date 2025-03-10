@@ -23,7 +23,6 @@ function TextAanlyser() {
           <div className="flex flex-auto pr-10">
             <ReadingTime text={text} />
             <TimCharLimit text={text} />
-
           </div>
           <LetterDensity text={text} />
         </div>
