@@ -3,7 +3,6 @@ import React from 'react';
 import TextGrabber from './textbox';
 import LetterDensity from './LetterDensity';
 import ReadingTime from './ReadingTime';
-import CharacterLimit from './CharacterLimit';
 import { create } from 'zustand';
 import TimCharLimit from './TimCharLimit';
 
