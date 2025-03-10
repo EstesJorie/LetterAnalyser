@@ -22,12 +22,14 @@ const LetterDensity = ({ text }) => {
     };
 
     const letterCount = countLetters(text);
- const letterDensity = text.toUpperCase().split("").reduce((acc, letter) => {
+    const letterDensity = text.toUpperCase().split("").reduce((acc, letter) => {
         if (letter.match(/[A-Z]/)) {
             acc[letter] = (acc[letter] || 0) + 1;
         }
         return acc;
     }, {});
+
+    const sortedLetterDensity = Object.entries(letterDensity).sort((a, b) => b[1] - a[1]);
 
     return (
         <div>
@@ -38,7 +40,7 @@ const LetterDensity = ({ text }) => {
               <div id="letter-density">
                 <table>
                   <tbody>
-                    {Object.entries(letterDensity).map(([letter, count]) => (
+                    {sortedLetterDensity.map(([letter, count]) => (
                       <tr key={letter} >
                         <td className='pr-4'>{letter}</td>
                         <td className="pr-4">{count}</td>
