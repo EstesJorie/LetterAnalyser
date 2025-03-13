@@ -47,7 +47,7 @@ const LetterDensity = ({ text }) => {
                         <td className='pr-4'>{((count / letterCount) * 100).toFixed(2)}%</td>
                         <td className='w-full'><div className="w-full  rounded-full h-4 flex items-center">
                               <div
-                                className="bg-red-400 h-4 rounded-sm transition-all duration-500 ease-in-out flex items-center justify-end pr-1"
+                                className="bg-gradient-to-r from-cyan-200 to-purple-400 h-4 rounded-sm transition-all duration-500 ease-in-out flex items-center justify-end pr-1"
                                 style={{ width: `${(count/letterCount)*100}%` }}
                               >
                                 {(count/letterCount)*100 > 5 && (
