@@ -37,7 +37,7 @@ export default function TimCharLimit({ text }) {
                     htmlFor={id}
                     className={`
                         text-white mono py-3 px-4 text-center no-underline inline-block text-lg m-1 cursor-pointer border-none rounded-full
-                        ${isCharLimitActive ? 'bg-green-700 font-bold' : 'hover:bg-green-900 font-bold'}
+                        ${isCharLimitActive ? 'bg-blue-400 font-bold' : 'hover:bg-sky-500 font-bold'}
                     `}>
                     {labelText}
                 </label>
