@@ -1,12 +1,49 @@
-# React + Vite
+# Text Analyser ![](public\vite.svg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React + Vite** webapp by Joe, Joseph, Tim, and Tom.
 
-Currently, two official plugins are available:
+![Image of the webpage](public\image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
 
-## Expanding the ESLint configuration
+A simple text analyser that provides the user with statistics on their inputted text...
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Character, word, and sentence counts 🧮
+
+- Reading time estimation ⏱️
+
+- Wordlist-based sentiment analysis 🎭
+
+- Letter density graph 📊
+
+- Toggleable character limit 🛑
+
+...all in real time!
+
+## Tech details:
+
++ React + Vite JavaScript webapp
+
++ Frontend built with TailwindCSS
+
++ RegEx for text feature counts
+
+## Credits:
+
+### The Team
+
+[EstesJorie](https://github.com/EstesJorie) - Joe
+[JosephB2](https://github.com/JosephB2) - Joseph
+[timaldred](https://github.com/timaldred) - Tim
+[lizardman1](https://github.com/lizardman1) - Tom
+
+**A huge thank you to [Adi](https://github.com/adityar15) for teaching us what we know!**
+
+### Packages & Tools
+
+TailwindCSS (Npm) 🖌️
+Sentiment (Npm) 🎭
+Zustand (Npm) 🐻
+Google Fonts CDN 🔤
+
+**Inspired by [this](https://www.frontendmentor.io/challenges/character-counter-znSgeWs_i6) Frontend Mentor challenge**
