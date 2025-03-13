@@ -3,33 +3,33 @@ import React, { useState } from 'react';
 
 const LetterDensity = ({ text }) => {
     const [textValue, setTextValue] = useState("");
-    const [showCountPage, setShowCountPage] = useState(false);
+    /* const [showCountPage, setShowCountPage] = useState(false); */ //no longer needed
 
     const handleTextChange = (event) => {
         setTextValue(event.target.value);
     };
 
-    const displayText = () => {
+    /*const displayText = () => {
         if (textValue !== "") { //if text box is not empty
             setShowCountPage(true);
         } else {
             alert("Please enter some text.");
         }
-    };
+    }; */ //no longer needed
 
-    const countLetters = (str) => {
+    const countLetters = (str) => { //str as input, returns number of letters present (removes non-alphabetic characters, replaces with blank)
         return str.replace(/[^a-zA-Z]/g, "").length;
     };
 
-    const letterCount = countLetters(text);
-    const letterDensity = text.toUpperCase().split("").reduce((acc, letter) => {
+    const letterCount = countLetters(text); //stores count of letters
+    const letterDensity = text.toUpperCase().split("").reduce((acc, letter) => { //map each letter to frequency of occurence in textbox
         if (letter.match(/[A-Z]/)) {
             acc[letter] = (acc[letter] || 0) + 1;
         }
         return acc;
     }, {});
 
-    const sortedLetterDensity = Object.entries(letterDensity).sort((a, b) => b[1] - a[1]);
+    const sortedLetterDensity = Object.entries(letterDensity).sort((a, b) => b[1] - a[1]); //sorts letter density in descending order
 
     return (
         <div>
