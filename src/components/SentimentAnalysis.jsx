@@ -29,7 +29,7 @@ export default function AnalyseSentiment({ text }) {
                 <h1>Sentiment Analysis</h1>
             </div>
             <div>
-                <p>Sentiment: <a className='underline'>{PosOrNeg(result.score)}</a></p>
+                <p className='font-semibold'>Sentiment: <a className='underline'>{PosOrNeg(result.score)}</a></p>
                 <p>Score: <a className='text-[#E0E0E0]'>{result.comparative}</a></p>
                 <p className='mono text-green-400'>{result.positive.join(' ')}</p>
                 <p className='mono text-red-400'>{result.negative.join(' ')}</p>
