@@ -1,47 +1,39 @@
 import React from 'react'
-import { useState } from 'react'
 
 export default function Counts({text}) {
   
     const input = text
 
-    let length = input.length
-    let spaceCount = input.split(" ").length - 1
-    let ellipses = input.split(/[/./.]/g).length - 1
-    let stopCount = input.split(/[.!?]/g).length
-    
+    let threedot = input.match(/\.\.\./g) ? input.match(/\.\.\./g).length : 0 // Find number of ellipses in string
+    let webCount = input.match(/(\w+)\.(\w+)/g) ? input.match(/(\w+)\.(\w+)/g).length : 0// Find number of websites in string
+    let stopCount = input.match(/\w+[.!?]/g) ? input.match(/\w+[.!?]/g).length - webCount - threedot : 0 // Find number of stops in string
 
-    let characterCount = length - spaceCount
+    // Checks length of string if you remove any spaces or repeated spaces
+    let characterCount = input.replace(/\s+/g, '').length
     let wordCount = 0
-    let sentenceCount = text != "" ? stopCount : 0
+    let sentenceCount = 0
 
+    //Checks if there are any website urls, then removes them from the word count if there are
     if ((input.match(/(\w)\.(\w)/g)) == null) {
         wordCount = input.split(/\w+/g).length - 1
     } else {
         wordCount = input.split(/\w+/g).length - (input.match(/(\w)\.(\w)/g).length) -1
     }
-
-    // if (input.slice(-1) != ('.' || ' ') && characterCount > 0) {
-    //     sentenceCount = stopCount + 1
-    // } else {
-    //     sentenceCount = stopCount
-    // }
+      
+      // Function to determine if the last characters are a stop or a stop with a space
+      function endsWithPunctuation(input) {
+        
+        return /[.?!]\s$/.test(input) || /[.?!]$/.test(input)
+      }
     
-    if ((input.match(/(\w+)\.(\w+)/g)) != null) {
-        sentenceCount = stopCount - (input.split(/(\w+)\.(\w+)/g).length -1)
-    } else if ((input.slice(-2).match([/[.?!]\s/g])) || (input.slice(-1).match([/[.?!]/g])) ) {
+    // Checks whether the last characters are a stop or a stop with a space, and then adds an extra sentence 
+    if (endsWithPunctuation(input)) {
         sentenceCount = stopCount
     } else if (characterCount > 0) {
-        sentenceCount = stopCount
+        sentenceCount = stopCount + 1
     }
     
-    
-    // if (input.split(/w+(\.)/g).length -1 > 0) {
-    //     sentenceCount = input.split(/w+(\.)/g).length -1
-    // }
-
-    
-    console.log(characterCount, wordCount, stopCount)
+    console.log(characterCount, wordCount, stopCount, webCount, threedot)
     
   return (
     <>
