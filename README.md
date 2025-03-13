@@ -1,4 +1,4 @@
-# Text Analyser ![](public\vite.svg)
+# Text Analyser ![](public/vite.svg)
 
 A **React + Vite** webapp by Joe, Joseph, Tim, and Tom.
 
@@ -49,6 +49,10 @@ TailwindCSS (Npm) 🖌️
 Sentiment (Npm) 🎭
 
 Zustand (Npm) 🐻
+
+Pie (Npm) 🥧
+
+Chart (Npm ) 📈
 
 Google Fonts CDN 🔤
 
